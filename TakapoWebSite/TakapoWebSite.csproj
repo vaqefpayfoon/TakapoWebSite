@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\less\" />
+    <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\scss\" />
+    <Folder Include="wwwroot\vendor\jquery.counterup\demo\" />
+    <Folder Include="wwwroot\vendor\waypoints\src\" />
+    <Folder Include="wwwroot\vendor\waypoints\test\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.10" />
+  </ItemGroup>
+
+</Project>
