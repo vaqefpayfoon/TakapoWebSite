@@ -57,7 +57,6 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" asp-action="About" asp-controller="Home">About Us</a></li>
                                 <li><a class="dropdown-item" asp-action="Contact" asp-controller="Home">Contact</a></li>
-                                @*<li><a class="dropdown-item" asp-action="Companies" asp-controller="Home">Companies</a></li>*@
                             </ul>
                         </li>
                         <li class="nav-item dropdown mega-dropdown">
@@ -141,7 +140,8 @@
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="#" target="_blank" class="btn btn-primary text-secondary d-none d-md-inline-block mr-3"><i class="far fa-paper-plane mr-2"></i> Talk To Us</a>
+                    @Html.ActionLink("فارسی", "ChangeLanguage", "Home", new KeyValueModel("lang", "fa"), new { @class = "btn btn-primary text-secondary d-none d-md-inline-block mr-3" })
+                    @Html.ActionLink("English", "ChangeLanguage", "Home", new KeyValueModel("lang", "en"), new { @class = "btn btn-primary text-secondary d-none d-md-inline-block mr-3" })
                 </div>
             </div>
         </nav>

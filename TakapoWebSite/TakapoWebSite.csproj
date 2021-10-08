@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\en\Controller\" />
+    <Folder Include="Areas\fa\Controller\" />
     <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\less\" />
     <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\scss\" />
     <Folder Include="wwwroot\vendor\jquery.counterup\demo\" />
