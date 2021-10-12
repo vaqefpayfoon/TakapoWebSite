@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\en\Controller\**" />
-    <Compile Remove="Areas\fa\Controller\**" />
-    <Content Remove="Areas\en\Controller\**" />
-    <Content Remove="Areas\fa\Controller\**" />
-    <EmbeddedResource Remove="Areas\en\Controller\**" />
-    <EmbeddedResource Remove="Areas\fa\Controller\**" />
-    <None Remove="Areas\en\Controller\**" />
-    <None Remove="Areas\fa\Controller\**" />
+    <Compile Remove="Areas\En\Controller\**" />
+    <Compile Remove="Areas\Fa\Controller\**" />
+    <Content Remove="Areas\En\Controller\**" />
+    <Content Remove="Areas\Fa\Controller\**" />
+    <EmbeddedResource Remove="Areas\En\Controller\**" />
+    <EmbeddedResource Remove="Areas\Fa\Controller\**" />
+    <None Remove="Areas\En\Controller\**" />
+    <None Remove="Areas\Fa\Controller\**" />
   </ItemGroup>
 
   <ItemGroup>

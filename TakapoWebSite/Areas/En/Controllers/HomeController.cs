@@ -8,8 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using TakapoWebSite.Models;
 
-namespace TakapoWebSite.Controllers
+namespace TakapoWebSite.Area.En.Controllers
 {
+    [Area("En")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
