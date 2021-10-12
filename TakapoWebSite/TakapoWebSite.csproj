@@ -5,8 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\en\Controller\" />
-    <Folder Include="Areas\fa\Controller\" />
+    <Compile Remove="Areas\en\Controller\**" />
+    <Compile Remove="Areas\fa\Controller\**" />
+    <Content Remove="Areas\en\Controller\**" />
+    <Content Remove="Areas\fa\Controller\**" />
+    <EmbeddedResource Remove="Areas\en\Controller\**" />
+    <EmbeddedResource Remove="Areas\fa\Controller\**" />
+    <None Remove="Areas\en\Controller\**" />
+    <None Remove="Areas\fa\Controller\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\less\" />
     <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\scss\" />
     <Folder Include="wwwroot\vendor\jquery.counterup\demo\" />
