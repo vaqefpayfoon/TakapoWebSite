@@ -22,19 +22,22 @@ namespace TakapoWebSite.Area.Fa.Controllers
             _httpContextAccessor = httpContextAccessor;
             if (Request != null && Request.Cookies["lang"] == null)
             {
-                SetCookie("lang", "fa", 1);
+                SetCookie("lang", "Fa", 1);
             }
 
         }
         public IActionResult ChangeLanguage(string key, string value)
         {
-            SetCookie(key, value, 1);
-            string cookieValueFromContext = _httpContextAccessor.HttpContext.Request.Cookies["lang"];
-            string cookieValueFromReq = Request.Cookies["lang"];
-            return View("Index");
+            SetCookie(key, value, 5);
+            //string cookieValueFromContext = _httpContextAccessor.HttpContext.Request.Cookies["lang"];
+            //string cookieValueFromReq = Request.Cookies["lang"];
+            // return View("Index");
+            return RedirectToAction("Index", "Home",
+                        new { Area = value });
         }
         private void SetCookie(string key, string value, int? expireTime)
         {
+            Response.Cookies.Delete(key);
             CookieOptions option = new CookieOptions();
 
             if (expireTime.HasValue)

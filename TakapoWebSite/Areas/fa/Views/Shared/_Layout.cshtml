@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html dir="rtl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,17 +51,19 @@
                     <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
-                                <span class="nav-link-inner-text">About</span>
+                                <span class="nav-link-inner-text">تکاپوطب</span>
                                 <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" asp-action="About" asp-controller="Home">About Us</a></li>
-                                <li><a class="dropdown-item" asp-action="Contact" asp-controller="Home">Contact</a></li>
+                                <li><a class="dropdown-item text-right" asp-action="About" asp-controller="Home">درباره ما</a></li>
+                                <li><a class="dropdown-item text-right" asp-action="Contact" asp-controller="Home">تماس با ما</a></li>
+                                <li><a class="dropdown-item text-right" asp-action="JoinUs" asp-controller="Home">خدمات پس از فروش</a></li>
+                                <li><a class="dropdown-item text-right" asp-action="JoinUs" asp-controller="Home">دعوت به همکاری</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown mega-dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
-                                <span class="nav-link-inner-text">Producrs</span>
+                                <span class="nav-link-inner-text">تصویربرداری</span>
                                 <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
                             </a>
                             <div class="dropdown-menu">
@@ -74,7 +76,7 @@
                                             <div class="z-2 pb-4 text-center">
                                                 <a href="#" class="btn btn-primary mb-2 mb-sm-0 mr-3 text-secondary">
                                                     <span class="mr-1"><span class="fas fa-th-large"></span></span>
-                                                    Catalogs
+                                                    Cataloges
                                                 </a>
                                                 <a href="#" target="_blank" class="btn btn-primary mb-2 mb-sm-0">
                                                     <span class="mr-1"><span class="fas fa-book"></span></span>
@@ -85,54 +87,64 @@
                                     </div>
                                     <div class="col pl-0">
                                         <ul class="list-style-none">
-                                            <li><a class="dropdown-item" href="#"> Mammography<span class="badge badge-dark ml-3">3D</span></a></li>
-                                            <li><a class="dropdown-item" href="#">BMD Discovery</a></li>
-                                            <li><a class="dropdown-item" href="#">Affirm</a></li>
-                                            <li><a class="dropdown-item" href="#">Breast Biopsy</a></li>
-                                            <li><a class="dropdown-item" href="#">C Arm</a></li>
-                                            <li><a class="dropdown-item" href="#">Dimensions</a></li>
-                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">Flouroscopy</a></li>
-                                            <li><a class="dropdown-item" href="#">Horizen</a></li>
+                                            <li><a class="dropdown-item text-right" href="#"> Mamography<span class="badge badge-dark float-left" style="font-family: Arial">3D</span></a></li>
+                                            <li><a class="dropdown-item text-right" href="#">BMD Discovery</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Affirm</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Breast Biopsy</a></li>
                                         </ul>
                                     </div>
                                     <div class="col pl-0">
                                         <ul class="list-style-none">
-                                            <li><a class="dropdown-item" href="#">Bactec<span class="badge badge-dark ml-3">FX</span></a></li>
-                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">Flow Cytometry</a></li>
-                                            <li><a class="dropdown-item" href="#">Gas Chromatography</a></li>
-                                            <li><a class="dropdown-item" href="#">HPLC</a></li>
-                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">HPV</a></li>
-                                            <li><a class="dropdown-item" href="#">Chromatography<span class="badge badge-dark ml-3">Ion</span></a></li>
-                                            <li><a class="dropdown-item" href="#">MGIT</a></li>
-                                            <li><a class="dropdown-item" href="#">Pheonix</a></li>
-
+                                            <li><a class="dropdown-item text-right" href="#">C Arm</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Dimensions</a></li>
+                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">Flouroscopy</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Horizen</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown mega-dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
-                                <span class="nav-link-inner-text">Catalogs</span>
+                                <span class="nav-link-inner-text">آزمایشگاهی</span>
                                 <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-lg">
-                                <div class="col-auto px-0" data-dropdown-content>
-                                    <div class="list-group list-group-flush">
-                                        <a href="#" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4">
-                                            <span class="icon icon-sm icon-secondary"><span class="fas fa-file-alt"></span></span>
-                                            <div class="ml-4">
-                                                <span class="text-dark d-block">Hologic</span>
-                                                <span class="small">Diagnostic & Medical Imaging</span>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-lg-6 inside-bg d-none d-lg-block">
+                                        <div class="justify-content-center bg-primary text-white">
+                                            <div class="px-6 pb-5 pt-3">
+                                                <img src="../assets/img/bactec-fx.webp" alt="Pixel Components">
                                             </div>
-                                        </a>
-                                        <a href="#" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4">
-                                            <span class="icon icon-sm icon-secondary"><span class="fas fa-file-alt"></span></span>
-                                            <div class="ml-4">
-                                                <span class="text-dark d-block">BD</span>
-                                                <span class="small">Diagnostics & Clinical Laboratories</span>
+                                            <div class="z-2 pb-4 text-center">
+                                                <a href="#" class="btn btn-primary mb-2 mb-sm-0 mr-3 text-secondary">
+                                                    <span class="mr-1"><span class="fas fa-th-large"></span></span>
+                                                    Cataloges
+                                                </a>
+                                                <a href="#" target="_blank" class="btn btn-primary mb-2 mb-sm-0">
+                                                    <span class="mr-1"><span class="fas fa-book"></span></span>
+                                                    Documents
+                                                </a>
                                             </div>
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <ul class="list-style-none">
+                                            <li><a class="dropdown-item text-right" href="#">Bactec<span class="badge badge-dark float-left">FX</span></a></li>
+                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">Flow Cytometry</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Gas Chromatography</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">HPLC</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col pl-0">
+                                        <ul class="list-style-none">
+                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">HPV</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Chromatography<span class="badge badge-dark float-left ml-3">Ion</span></a></li>
+                                            <li><a class="dropdown-item text-right" href="#">MGIT</a></li>
+                                            <li><a class="dropdown-item text-right" href="#">Pheonix</a></li>
+
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -140,8 +152,8 @@
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
-                    @Html.ActionLink("فارسی", "ChangeLanguage", "Home", new KeyValueModel("lang", "fa"), new { @class = "btn btn-primary text-secondary d-none d-md-inline-block mr-3" })
-                    @Html.ActionLink("English", "ChangeLanguage", "Home", new KeyValueModel("lang", "en"), new { @class = "btn btn-primary text-secondary d-none d-md-inline-block mr-3" })
+                    @Html.ActionLink("فارسی", "ChangeLanguage", "Home", new KeyValueModel("lang", "Fa"), new { @class = "btn btn-primary text-secondary d-none d-md-inline-block mr-3" })
+                    @Html.ActionLink("English", "ChangeLanguage", "Home", new KeyValueModel("lang", "En"), new { @class = "btn btn-primary text-secondary d-none d-md-inline-block mr-3" })
                 </div>
             </div>
         </nav>
@@ -155,9 +167,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <p>Join Us <strong>Takapo Teb</strong> In Social Media's</p>
+                    <p>ما را در شبگه های اجتماعی دنبال بکنید</p>
                     <ul class="d-flex list-unstyled mb-5 mb-lg-0">
-                        <li class="mr-2">
+                        <li>
                             <a href="#" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="twitter social link"
                                data-toggle="tooltip" data-placement="top" title="Follow on Twitter">
                                 <span aria-hidden="true" class="fab fa-twitter"></span>
@@ -175,7 +187,7 @@
                                 <span aria-hidden="true" class="fab fa-instagram"></span>
                             </a>
                         </li>
-                        <li>
+                        <li class="mr-2">
                             <a href="#" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="dribbble social link"
                                data-toggle="tooltip" data-placement="top" title="Follow us on Linked In">
                                 <span aria-hidden="true" class="fab fa-linkedin"></span>
@@ -184,26 +196,16 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-5 mb-lg-0">
-                    <h5>Menus</h5>
                     <ul class="footer-links list-unstyled mt-2">
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">Companies</a></li>
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">Products</a></li>
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">About Us</a></li>
-                        <li><a class="p-2" target="_blank" href="#">Supports</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
-                    <h5>Events</h5>
-                    <ul class="footer-links list-unstyled mt-2">
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">News</a></li>
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">Catalogs</a></li>
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">Article</a></li>
-                        <li><a class="p-2" target="_blank" href="#">Training</a></li>
+                        <li class="mb-1"><a class="p-2" target="_blank" href="#">درباره ما</a></li>
+                        <li class="mb-1"><a class="p-2" target="_blank" href="#">تماس با ما</a></li>
+                        <li class="mb-1"><a class="p-2" target="_blank" href="#"></a>خدمات پس از فروش</li>
+                        <li><a class="p-2" target="_blank" href="#">دعوت به همکاری</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4 mb-5 mb-lg-0">
                     <h5>Subscribe</h5>
-                    <p class="text-gray font-small mt-2">Join our mailing list And Get Our News </p>
+                    <p class="text-gray font-small mt-2">برای گرفتن آخرین اخبار ایمیلتان را وارد نمایید </p>
                     <form action="#">
                         <div class="form-row mb-2">
                             <div class="col-12">
