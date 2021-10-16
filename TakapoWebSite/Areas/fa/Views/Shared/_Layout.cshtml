@@ -32,8 +32,8 @@
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
             <div class="container position-relative">
                 <a asp-action="Index" asp-controller="Home" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4">
-                    <img class="navbar-brand-dark" src="../assets/img/brand/English_logo.png" alt="Logo light">
-                    <img class="navbar-brand-light" src="../assets/img/brand/English_logo.png" alt="Logo dark">
+                    <img class="navbar-brand-dark" src="../../assets/img/brand/English_logo.png" alt="Logo light">
+                    <img class="navbar-brand-light" src="../../assets/img/brand/English_logo.png" alt="Logo dark">
                 </a>
                 <div class="navbar-collapse collapse" id="navbar_global">
                     <div class="navbar-collapse-header">
@@ -57,8 +57,8 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item text-right" asp-action="About" asp-controller="Home">درباره ما</a></li>
                                 <li><a class="dropdown-item text-right" asp-action="Contact" asp-controller="Home">تماس با ما</a></li>
-                                <li><a class="dropdown-item text-right" asp-action="JoinUs" asp-controller="Home">خدمات پس از فروش</a></li>
-                                <li><a class="dropdown-item text-right" asp-action="JoinUs" asp-controller="Home">دعوت به همکاری</a></li>
+                                <li><a class="dropdown-item text-right" asp-action="Support" asp-controller="Home">خدمات پس از فروش</a></li>
+                                @*<li><a class="dropdown-item text-right" asp-action="JoinUs" asp-controller="Home">دعوت به همکاری</a></li>*@
                             </ul>
                         </li>
                         <li class="nav-item dropdown mega-dropdown">
@@ -167,7 +167,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <p>ما را در شبگه های اجتماعی دنبال بکنید</p>
+                    <p class="text-right">ما را در شبگه های اجتماعی دنبال بکنید</p>
                     <ul class="d-flex list-unstyled mb-5 mb-lg-0">
                         <li>
                             <a href="#" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="twitter social link"
@@ -195,17 +195,17 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                <div class="col-6 col-lg-4 mb-5 mb-lg-0">
                     <ul class="footer-links list-unstyled mt-2">
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">درباره ما</a></li>
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#">تماس با ما</a></li>
-                        <li class="mb-1"><a class="p-2" target="_blank" href="#"></a>خدمات پس از فروش</li>
-                        <li><a class="p-2" target="_blank" href="#">دعوت به همکاری</a></li>
+                        <li class="mb-1"><a class="text-right" target="_blank" href="#">درباره ما</a></li>
+                        <li class="mb-1"><a class="text-right" target="_blank" href="#">تماس با ما</a></li>
+                        <li class="mb-1"><a class="text-right" target="_blank" href="#">خدمات پس از فروش</a></li>
+                        <li><a class="text-right" target="_blank" href="#">دعوت به همکاری</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4 mb-5 mb-lg-0">
                     <h5>Subscribe</h5>
-                    <p class="text-gray font-small mt-2">برای گرفتن آخرین اخبار ایمیلتان را وارد نمایید </p>
+                    <p class="text-gray text-right font-small mt-2">برای گرفتن آخرین اخبار ایمیلتان را وارد نمایید </p>
                     <form action="#">
                         <div class="form-row mb-2">
                             <div class="col-12">

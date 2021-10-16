@@ -59,7 +59,15 @@ namespace TakapoWebSite.Area.Fa.Controllers
         {
             return View();
         }
-        public IActionResult OurTeam()
+        public IActionResult Support()
+        {
+            return View();
+        }
+        public IActionResult Imaging()
+        {
+            return View();
+        }
+        public IActionResult JoinUs()
         {
             return View();
         }
