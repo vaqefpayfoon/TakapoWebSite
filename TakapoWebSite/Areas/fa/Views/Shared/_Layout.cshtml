@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-6 collapse-brand">
                                 <a asp-action="Index" asp-controller="Home" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
-                                    <img src="../assets/img/brand/English_logo.png" alt="Themesberg logo">
+                                    <img src="../../assets/img/brand/English_logo.png" alt="Themesberg logo">
                                 </a>
                             </div>
                             <div class="col-6 collapse-close">
@@ -71,7 +71,7 @@
                                     <div class="col-lg-6 inside-bg d-none d-lg-block">
                                         <div class="justify-content-center bg-primary text-white">
                                             <div class="px-6 pb-5 pt-3">
-                                                <img src="../assets/img/megamenu-image.png" alt="Pixel Components">
+                                                <img src="../../assets/img/megamenu-image.png" alt="Pixel Components">
                                             </div>
                                             <div class="z-2 pb-4 text-center">
                                                 <a href="#" class="btn btn-primary mb-2 mb-sm-0 mr-3 text-secondary">
@@ -87,18 +87,20 @@
                                     </div>
                                     <div class="col pl-0">
                                         <ul class="list-style-none">
-                                            <li><a class="dropdown-item text-right" href="#"> Mamography<span class="badge badge-dark float-left" style="font-family: Arial">3D</span></a></li>
-                                            <li><a class="dropdown-item text-right" href="#">BMD Discovery</a></li>
-                                            <li><a class="dropdown-item text-right" href="#">Affirm</a></li>
-                                            <li><a class="dropdown-item text-right" href="#">Breast Biopsy</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="mammography"> Mammography<span class="badge badge-dark float-left" style="font-family: Arial">3D</span></a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="vaccum">کنسول وکیوم بایوپسی</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="affirm">Affirm</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="biopsy">Breast Biopsy</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="viera">پرتال viera</a></li>
                                         </ul>
                                     </div>
                                     <div class="col pl-0">
                                         <ul class="list-style-none">
-                                            <li><a class="dropdown-item text-right" href="#">C Arm</a></li>
-                                            <li><a class="dropdown-item text-right" href="#">Dimensions</a></li>
-                                            <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#" target="_blank">Flouroscopy</a></li>
-                                            <li><a class="dropdown-item text-right" href="#">Horizen</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="c-arm">C Arm</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="celero">سوزن Celero</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="ATEC">سوزن ATEC</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="eviva">سوزن eviva</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="padmammo">پد Mamography</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -114,7 +116,7 @@
                                     <div class="col-lg-6 inside-bg d-none d-lg-block">
                                         <div class="justify-content-center bg-primary text-white">
                                             <div class="px-6 pb-5 pt-3">
-                                                <img src="../assets/img/bactec-fx.webp" alt="Pixel Components">
+                                                <img src="../../assets/img/bactec-fx.webp" alt="Pixel Components">
                                             </div>
                                             <div class="z-2 pb-4 text-center">
                                                 <a href="#" class="btn btn-primary mb-2 mb-sm-0 mr-3 text-secondary">
@@ -166,7 +168,7 @@
     <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-6">
                     <p class="text-right">ما را در شبگه های اجتماعی دنبال بکنید</p>
                     <ul class="d-flex list-unstyled mb-5 mb-lg-0">
                         <li>
@@ -194,31 +196,6 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-6 col-lg-4 mb-5 mb-lg-0">
-                    <ul class="footer-links list-unstyled mt-2">
-                        <li class="mb-1"><a class="text-right" target="_blank" href="#">درباره ما</a></li>
-                        <li class="mb-1"><a class="text-right" target="_blank" href="#">تماس با ما</a></li>
-                        <li class="mb-1"><a class="text-right" target="_blank" href="#">خدمات پس از فروش</a></li>
-                        <li><a class="text-right" target="_blank" href="#">دعوت به همکاری</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-lg-4 mb-5 mb-lg-0">
-                    <h5>Subscribe</h5>
-                    <p class="text-gray text-right font-small mt-2">برای گرفتن آخرین اخبار ایمیلتان را وارد نمایید </p>
-                    <form action="#">
-                        <div class="form-row mb-2">
-                            <div class="col-12">
-                                <label class="h6 font-weight-normal d-none" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control mb-2" placeholder="example@company.com" name="email" aria-label="Subscribe form" id="exampleInputEmail3" required>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block" data-loading-text="Sending">
-                                    <span>Subscribe</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

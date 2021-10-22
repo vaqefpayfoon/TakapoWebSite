@@ -12,9 +12,12 @@ namespace TakapoWebSite.Models
             ProductDetails = new List<ProductDetail>();
         }
         public int Id { get; set; }
-        public string Title { get; set; }
         public string ImageUrl { get; set; }
+        public string ImageAlt { get; set; }
+        public string ImageTitle { get; set; }
+        public string ImagePassage { get; set; }
         public List<ProductDetail> ProductDetails { get; set; }
+        public List<ProductDetail> CompleteInfo { get; set; }
     }
     public class ProductDetail
     {
