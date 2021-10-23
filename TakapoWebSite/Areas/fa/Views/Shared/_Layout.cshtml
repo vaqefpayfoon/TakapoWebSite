@@ -57,7 +57,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item text-right" asp-action="About" asp-controller="Home">درباره ما</a></li>
                                 <li><a class="dropdown-item text-right" asp-action="Contact" asp-controller="Home">تماس با ما</a></li>
-                                <li><a class="dropdown-item text-right" asp-action="Support" asp-controller="Home">خدمات پس از فروش</a></li>
+                                @*<li><a class="dropdown-item text-right" asp-action="Support" asp-controller="Home">خدمات پس از فروش</a></li>*@
                                 @*<li><a class="dropdown-item text-right" asp-action="JoinUs" asp-controller="Home">دعوت به همکاری</a></li>*@
                             </ul>
                         </li>
@@ -87,11 +87,12 @@
                                     </div>
                                     <div class="col pl-0">
                                         <ul class="list-style-none">
-                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="mammography"> Mammography<span class="badge badge-dark float-left" style="font-family: Arial">3D</span></a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="mammography3d"> ماموگرافی سه بعدی<span class="badge badge-dark float-left" style="font-family: Arial">3D</span></a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="mammography"> ماموگرافی دو بعدی<span class="badge badge-dark float-left" style="font-family: Arial">3D</span></a></li>
                                             <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="vaccum">کنسول وکیوم بایوپسی</a></li>
                                             <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="affirm">Affirm</a></li>
                                             <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="biopsy">Breast Biopsy</a></li>
-                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="viera">پرتال viera</a></li>
+                                            <li><a class="dropdown-item text-right" asp-area="Fa" asp-controller="Home" asp-action="Imaging" asp-route-name="viera">سونوگرافی پرتال پستان</a></li>
                                         </ul>
                                     </div>
                                     <div class="col pl-0">

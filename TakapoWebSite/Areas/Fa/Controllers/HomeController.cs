@@ -68,6 +68,90 @@ namespace TakapoWebSite.Area.Fa.Controllers
             Product product;
             switch (name)
             {
+                case "mammography3d":
+                    {
+                        product = new Product
+                        {
+                            Id = 1,
+                            ImageTitle = "ماموگرافی دیجیتال دو بعدی و سه بعدی",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Imaging/3Dimensions.jpg",
+                            ImageAlt = "3Dimensions",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 1,
+                                    ProductId = 1,
+                                    Passage = "اولین دستگاه مامو گرافی دیجیتال مورد تائید FDA امریکا"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 2,
+                                    ProductId = 1,
+                                    Passage = "امکان استفاده همزمان از دو تکنیک تصویربرداری دو بعدی و سه بعدی"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 3,
+                                    ProductId = 1,
+                                    Passage = " کیفیت باالتر تشخیص با آنالیز تصاویر )View Combo (3D+2D در مقایسه با تصاویر 2"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 4,
+                                    ProductId = 1,
+                                    Passage = "کاهش انجام بایوپسی های غیر ضروری"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 5,
+                                    ProductId = 1,
+                                    Passage = "تصویربرداری از بافت در زوایای مختلف و ارائه تصاویری با ضخامت1 میلیمتر پس از بازسازی سه بعدی"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 6,
+                                    ProductId = 1,
+                                    Passage = "امکان بازبینی بافت در لایه های مختلف تصویر"
+                                }
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 7,
+                                    ProductId = 1,
+                                    Passage = " "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 8,
+                                    ProductId = 1,
+                                    Passage = "امکان اتصال به PACS  و سازگار با DICOM 3 "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 9,
+                                    ProductId = 1,
+                                    Passage = "قابلیت کاربردی با workstation  های مخصوص مامو گرافی "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 10,
+                                    ProductId = 1,
+                                    Passage = "جایگاه نخست سیستم های مامو گرافی دیجیتال کمپانی Hologic در دنیا طبق اعلام موسسه  KLAS  در 7 سال متوالی "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 1,
+                                    Passage = "امکان  استفاده از سیستم بایوپسی بصورت نشسته یا خوابیده به پهلو "
+                                }
+                            }
+                        };
+                    }
+                    break;
                 case "mammography":
                     {
                         product = new Product
