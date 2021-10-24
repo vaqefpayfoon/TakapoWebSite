@@ -1,5 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model IEnumerable<Product>
+@foreach (var item in Model)
+{
+    <br />
+    <br />
+    <div class="container row">
+        <div class="col-12 col-sm-6">
+            <div class="card bg-primary shadow-soft border-light">
+                <img src="@item.ImageUrl" alt="@item.ImageAlt">
+                <div class="card-footer border-top border-light text-right p-4">
+                    <div href="#" class="h5">@item.ImageTitle</div>
+                    <div class="mt-2">@item.ImagePassage</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="card bg-primary shadow-soft border-light">
+                <div class="card-body border-top border-light p-4">
+                    <ul class="list-group">
+                        @foreach (var woak in item.ProductDetails)
+                        {
+                            <li class="list-group-item text-right">
+                                @woak.Passage
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (item.CompleteInfo.Count > 0)
+    {
+        <div class="container row mt-3 pt-3">
+            <div class="col">
+                <div class="card bg-primary shadow-soft border-light">
+                    <div class="card-body border-top border-light p-4">
+                        <ul class="list-group">
+                            @foreach (var woak in item.CompleteInfo)
+                            {
+                                <li class="list-group-item text-right">
+                                    @woak.Passage
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 }

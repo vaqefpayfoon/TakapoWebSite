@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\assets\img\Laboratory\" />
     <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\less\" />
     <Folder Include="wwwroot\vendor\fortawesome\fontawesome-free\scss\" />
     <Folder Include="wwwroot\vendor\jquery.counterup\demo\" />

@@ -65,12 +65,12 @@ namespace TakapoWebSite.Area.Fa.Controllers
         }
         public IActionResult Imaging(string name)
         {
-            Product product;
+            List<Product> lst;
             switch (name)
             {
                 case "mammography3d":
                     {
-                        product = new Product
+                        Product product = new Product
                         {
                             Id = 1,
                             ImageTitle = "ماموگرافی دیجیتال دو بعدی و سه بعدی",
@@ -117,49 +117,19 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 }
                             },
                             CompleteInfo = new List<ProductDetail>()
-                            {
-                                new ProductDetail
-                                {
-                                    Id = 7,
-                                    ProductId = 1,
-                                    Passage = " "
-                                },
-                                new ProductDetail
-                                {
-                                    Id = 8,
-                                    ProductId = 1,
-                                    Passage = "امکان اتصال به PACS  و سازگار با DICOM 3 "
-                                },
-                                new ProductDetail
-                                {
-                                    Id = 9,
-                                    ProductId = 1,
-                                    Passage = "قابلیت کاربردی با workstation  های مخصوص مامو گرافی "
-                                },
-                                new ProductDetail
-                                {
-                                    Id = 10,
-                                    ProductId = 1,
-                                    Passage = "جایگاه نخست سیستم های مامو گرافی دیجیتال کمپانی Hologic در دنیا طبق اعلام موسسه  KLAS  در 7 سال متوالی "
-                                },
-                                new ProductDetail
-                                {
-                                    Id = 11,
-                                    ProductId = 1,
-                                    Passage = "امکان  استفاده از سیستم بایوپسی بصورت نشسته یا خوابیده به پهلو "
-                                }
-                            }
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
-                case "mammography":
+                case "mammography2d":
                     {
-                        product = new Product
+                        Product product = new Product
                         {
                             Id = 1,
                             ImageTitle = "مامو گرافی دیجیتال دوبعدی مدل",
                             ImagePassage = "Selenia Dimensions System  Avia 3000 Package",
-                            ImageUrl = @"/assets/img/Imaging/3Dimensions.jpg",
+                            ImageUrl = @"/assets/img/Imaging/2Dimensions.jpg",
                             ImageAlt = "3Dimensions",
                             ProductDetails = new List<ProductDetail>()
                             {
@@ -234,11 +204,13 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 }
                             }
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 case "horizon":
                     {
-                        product = new Product
+                        Product product = new Product
                         {
                             Id = 2,
                             ImageTitle = "دستگاه سنجش تراکم استخوان",
@@ -432,11 +404,13 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 }
                             }
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 case "c-arm":
                     {
-                        product = new Product
+                        Product product = new Product
                         {
                             Id = 3,
                             ImageTitle = "مینی سی آرم دیجیتال",
@@ -522,11 +496,13 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 },
                             }
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 case "biopsy":
                     {
-                        product = new Product
+                        Product product = new Product
                         {
                             Id = 4,
                             ImageAlt = "biopsy",
@@ -580,11 +556,13 @@ namespace TakapoWebSite.Area.Fa.Controllers
                             },
                             CompleteInfo = new List<ProductDetail>()
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
-                case "celero":
+                case "needles":
                     {
-                        product = new Product()
+                        Product product = new Product()
                         {
                             Id = 5,
                             ImageAlt = "celero",
@@ -632,11 +610,9 @@ namespace TakapoWebSite.Area.Fa.Controllers
                             },
                             CompleteInfo = new List<ProductDetail>()
                         };
-                    }
-                    break;
-                case "ATEC":
-                    {
-                        product = new Product()
+                        lst = new List<Product>();
+                        lst.Add(product);
+                        Product product2 = new Product()
                         {
                             Id = 5,
                             ImageAlt = "ATEC",
@@ -678,17 +654,14 @@ namespace TakapoWebSite.Area.Fa.Controllers
                             },
                             CompleteInfo = new List<ProductDetail>()
                         };
-                    }
-                    break;
-                case "eviva":
-                    {
-                        product = new Product
+                        lst.Add(product2);
+                        Product product3 = new Product
                         {
                             Id = 7,
-                            ImageAlt = "ATEC",
+                            ImageAlt = "eviva",
                             ImageTitle = "سوزن بایوپسی eviva",
                             ImagePassage = "",
-                            ImageUrl = @"/assets/img/Imaging/ATEC.png",
+                            ImageUrl = @"/assets/img/Imaging/eviva.png",
                             ProductDetails = new List<ProductDetail>()
                             {
                                 new ProductDetail
@@ -724,11 +697,12 @@ namespace TakapoWebSite.Area.Fa.Controllers
                             },
                             CompleteInfo = new List<ProductDetail>()
                         };
+                        lst.Add(product3);
                     }
                     break;
                 case "padmammo":
                     {
-                        product = new Product
+                        Product product = new Product
                         {
                             Id = 8,
                             ImageAlt = "padmammo",
@@ -776,15 +750,17 @@ namespace TakapoWebSite.Area.Fa.Controllers
                             },
                             CompleteInfo = new List<ProductDetail>()
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 case "viera":
                     {
-                        product = new Product()
+                        Product product = new Product()
                         {
                             Id = 9,
                             ImageAlt = "viera",
-                            ImageTitle = "سونوگرافی پرتابل پستان viera",
+                            ImageTitle = "کنسول وکیوم بایوپسی و رادیوگرافی بایوپسی پستان",
                             ImagePassage = "",
                             ImageUrl = @"/assets/img/Imaging/viera.png",
                             ProductDetails = new List<ProductDetail>()
@@ -822,11 +798,13 @@ namespace TakapoWebSite.Area.Fa.Controllers
                             },
                             CompleteInfo = new List<ProductDetail>()
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 case "vaccum":
                     {
-                        product = new Product()
+                        Product product = new Product()
                         {
                             Id = 10,
                             ImageAlt = "viera",
@@ -868,11 +846,13 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 },
                             }
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 case "affirm":
                     {
-                        product = new Product()
+                        Product product = new Product()
                         {
                             Id = 11,
                             ImageAlt = "affirm",
@@ -932,22 +912,587 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 },
                             }
                         };
+                        lst = new List<Product>();
+                        lst.Add(product);
                     }
                     break;
                 default:
                     {
-                        product = new Product
-                        {
-                            Id = 1000,
-                            ImageUrl = "",
-                            ImagePassage = "",
-                            ImageTitle = "",
-                            ProductDetails = new List<ProductDetail>()
-                        };
+                        lst = new List<Product>();
                     }
                     break;
             }
-            return View(product);
+            return View(lst);
+        }
+        public IActionResult Laboratory(string name)
+        {
+            List<Product> lst;
+            switch (name)
+            {
+                case "bactec":
+                    {
+                        Product product = new Product()
+                        {
+                            Id = 10,
+                            ImageTitle = "دستگاه کشت خون اتوماتیک",
+                            ImagePassage = "BD Bactec",
+                            ImageUrl = @"/assets/img/bactec-fx.webp",
+                            ImageAlt = "Bactec",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                               new ProductDetail
+                               {
+                                   Id = 91,
+                                   ProductId = 10,
+                                   Passage = "دستگاه کشت خون اتوماتیک BD BACTEC با استفاده از تکنیک فلورسانس و الگوریتم های تشخیصی متعدد با دقت یک میکروارگانیسم در میلی لیتر در زمان بسیار کوتاه، از سه ساعت پس از کشت تا سه روز، نتیجه ی کشت خون مثبت را گزارش می کند (85% از نمونه هاي مثبت طی ٢٤ ساعت اول کشت مشخص مي شوند) و نتایج منفی در پایان روز پنجم کشت با اطمینان از عدم حضور میکروارگانیسم ها گزارش می گردند."
+                               },
+                               new ProductDetail
+                               {
+                                   Id = 92,
+                                   ProductId = 10,
+                                   Passage= "توانمندی در تشخیص انواع میکروارگانیسم بر پایه محیط کشت های مغذی است که از یک سو بستری مناسب برای رشد انواع باکتری های گرم مثبت، گرم منفی، هوازی و بیهوازی، انواع قارچها و مخمرها را فراهم می سازد و از سوی دیگر به علت دارا بودن دو نوع رزین(آب دوست/آب گریز) و بی اثر نمودن تمامی آنتی بيوتيك های محلول در خون، امکان رشد میکروارگانیسم ها را فراهم می آورد"
+                               }
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                               new ProductDetail
+                               {
+                                   Id = 93,
+                                   ProductId = 10,
+                                   Passage = "در واقع با بهره گیری از تکنولوژی رزین بدون نیاز به قطع پروسه درمان آنتی بیوتیکی امکان نمونه گیری و کشت خون مهیاست"
+                               },
+                               new ProductDetail
+                               {
+                                   Id = 94,
+                                   ProductId = 10,
+                                   Passage = "فناوری فلورسانس و استفاده از الگوریتم های اختصاصی تشخیص فاز رشد، امکان شناسایی گونه های کند رشد و یا گونه هایی که مقدار محدودی CO2 تولید می کنند را فراهم می آورد "
+                               }
+                            }
+                        };
+                        lst = new List<Product>();
+                        lst.Add(product);
+                        Product product2 = new Product()
+                        {
+                            Id = 10,
+                            ImageTitle = "انواع ویال های کشت خون در سیستم ",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/vial.jpg",
+                            ImageAlt = "Bactec",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                               new ProductDetail
+                               {
+                                   Id = 91,
+                                   ProductId = 10,
+                                   Passage = "ويال Plus Aerobic/F : كليه ميكروارگانيسم هاي هوازی، ميكروائروفيل، قارچها و مخمرها در اين نوع ويال رشد مي كنند."
+                               },
+                               new ProductDetail
+                               {
+                                   Id = 91,
+                                   ProductId = 10,
+                                   Passage = "ويال Plus Anaerobic : ویال حاوی رزين و دارای محيطي مناسب جهت رشد انواع ميكروارگانيسم های بيهوازی است."
+                               },
+                            new ProductDetail
+                               {
+                                   Id = 92,
+                                   ProductId = 10,
+                                   Passage = "ويال Anaerobic lytic : دارای عامل لیز کننده ی گلبول های سفید و قرمز می باشد که میزان تشخیص ارگانیسم های فاگوسیت شده و درون سلولی را افزایش می دهد . در اين محيط علاوه بر باکتری های بی هوازی اجباری سرعت رشد ميكروارگانيسم های بی هوازی اختياری نيز افزايش چشمگيری دارد."
+                               },
+                               new ProductDetail
+                               {
+                                   Id = 93,
+                                   ProductId = 10,
+                                   Passage = "ويال ويژه اطفال Peds plusفرمولاسیون ویژه ویال های کشت خون اطفال درسیستم BD BACTEC باعث افزایش دقت و سرعت رشد عوامل سپسیس در کودکان می باشد و بسته به وزن نوزاد، امکان نمونه گیری از 0.5-3 cc وجود دارد. 99% ميكروارگانيسم هایی كه عامل عفونت خونی در اطفال مي باشند، قابليت رشد در اين نوع ويال را دارند."
+                               },
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                               new ProductDetail
+                               {
+                                   Id = 94,
+                                   ProductId = 10,
+                                   Passage = "ويال ويژه ما یکوباکتریوم Myco/F : ويال ويژه جهت تشخيص مايكوباكتريوم در نمونه خون و مايعات استريل است."
+                               },
+                               new ProductDetail
+                               {
+                                   Id = 94,
+                                   ProductId = 10,
+                                   Passage = "ويال ويژه قارچها Mycosis  : ويال تخصصي جهت تشخيص و رشد سريع ٧٢ نوع مخمر و قارچ پاتوژن می باشد"
+                               }
+                            }
+                        };
+                        lst.Add(product2);
+                    }
+                    break;
+                case "phoenix":
+                    {
+                        lst = new List<Product>();
+                        Product product = new Product()
+                        {
+                            Id = 11,
+                            ImageTitle = "سیستم اتوماتیک تعیین هویت و تعیین حساسیت آنتی بیوتیکی(آنتی بیوگرام)",
+                            ImagePassage = "معتبرترین سیستم برای تعیین مقاومت میکروبی",
+                            ImageUrl = @"/assets/img/Laboratory/phoenix.webp",
+                            ImageAlt = "phoenix",
+                            ProductDetails = new List<ProductDetail>
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 97,
+                                    ProductId = 11,
+                                    Passage = "اقدامات موثر درکنترل عفونت ها، بستگی به عملکرد آزمایشگاه در تشخیص صحیح ID و تعیین دقیق AST در سریع ترین زمان ممکن دارد"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 97,
+                                    ProductId = 11,
+                                    Passage = "BD Phoenix با تکنولوژی منحصر به فرد خود به آزمایشگاه های میکروبیولوژی امکان انجام همزمان ID و AST با دقیق ترین و سریع ترین روش ممکن را می دهد."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 97,
+                                    ProductId = 11,
+                                    Passage = "سیستم BD Phoenix با پنل های ویژه قادر است تا هویت بیش از 160 گونه باکتری گرم منفی و 140 گونه باكتري گرم مثبت و 64 نوع قارچ و مخمر را در كمتر از ١۰ ساعت تعیین نمايد."
+                                },
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 97,
+                                    ProductId = 11,
+                                    Passage = "این سیستم با تکنولوژی دوگانه هر20  دقیقه چاهک ها را از نظرRedox  (اکسیداسیون - احیا) و Turbidity (کدورت سنجی) مورد بررسی قرار می دهد. در واقع نه تنها رشد باکتری ها، بلکه سوخت و ساز آنها را نیز بررسی می کند. "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 97,
+                                    ProductId = 11,
+                                    Passage = "تعیین MIC )حداقل غلظت ممانعت کنندگی( بر اساس استاندارد CLSI یا EUCAST : در تمامی پنل های BD Phoenix با رقت سازی های سریالی، حداقل 3 و حداکثر 8 غلظت برای هر آنتی بیوتیک، MIC تعیین می شود."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 97,
+                                    ProductId = 11,
+                                    Passage = "طراحی پنل با تکنولوژی دوگانه  (Redox,Turbidtiy)در کنار تعیین MIC، امکان تشخیص مقاومت های تاخیری را فراهم می آورد."
+                                },
+                            }
+                        };
+                        lst.Add(product);
+                        Product product2 = new Product()
+                        {
+                            Id = 11,
+                            ImageTitle = "انواع پنل های BD Phoenix",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/phoenixpanel2.png",
+                            ImageAlt = "phoenix panel",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 11,
+                                    Passage = "پنل های تعیین ID (باکتری های گرم منفی، باکتری های گرم مثبت و مخمر)"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 11,
+                                    Passage = "پنل های تعیین AST (باکتری های گرم منفی، استرپتوکوک ها، باکتری های گرم مثبت و Emerge)"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 11,
+                                    Passage = "تعیین ID : از میان سیستم های اتوماتیک تعیین هویت(ID)، BD Phoenix بالاترین درصد تشخیص صحیح را دارا می باشد و همچنین تنها سیستم اتوماتیکی است که تشخیص اشتباه ندارد.(0%)"
+                                },
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                        };
+                        lst.Add(product2);
+                        Product product3 = new Product()
+                        {
+                            Id = 11,
+                            ImageTitle = "انواع پنل های BD Phoenix",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/phoenixpanel1.png",
+                            ImageAlt = "phoenix panel",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 11,
+                                    Passage = "پنل های تعیین AST (باکتری های گرم منفی، استرپتوکوک ها، باکتری های گرم مثبت و Emerge)"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 11,
+                                    Passage = "تعیین AST : در هر پنل (COMBINATION ID + AST ) Combo ، 84 چاهک (Well) با  19-23آنتی بیوتیک به تعیین AST اختصاص داده شده است ."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 11,
+                                    ProductId = 11,
+                                    Passage = "در هر پنلEmerge ، 132 چاهک با 30-31 آنتی بیوتیک برای تعیین AST اختصاص داده شده است که دارای آنتی بیوتیک ها و رقت های بیشتری می باشد.(رنج های گسترده تر MIC، برای انطباق با EUCAST و CLSI و تشخیص بروز مقاومت با گستره ی انتخابی وسیع آنتی بیوتیک ها)"
+                                }
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                        };
+                        lst.Add(product3);
+                    }
+                    break;
+                case "panther":
+                    {
+                        lst = new List<Product>();
+                        Product product = new Product()
+                        {
+                            Id = 11,
+                            ImageTitle = "سیستم تمام اتوماتیک Panther",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/Panther.png",
+                            ImageAlt = "panther",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                     Id = 12,
+                                     ProductId = 11,
+                                     Passage = "رویکرد اصلی کمپانی HOLOGIC، تندرستی و بهبود سلامت در زنان از طریق تشخیص زود هنگام و درمان به موقع بیماری های مرتبط با آنهاست."
+                                },
+                                new ProductDetail
+                                {
+                                    Id=12,
+                                    ProductId =12,
+                                    Passage = "سرطان سرویکس یکی از شایع ترین انواع سرطان درمیان زنان سراسر دنیاست.  HPVعامل اتیولوژیک بیش از 99% از سرطان های دهانه ی رحم است و معمولا تا مراحل پیشرفته بیماری بدون علامت می باشد. لذا مهمترین مسئله در کنترل و جلوگیری از بروز سرطان سرویکس، غربالگری منظم با استفاده از آزمایش های مولکولی معتبر با حساسیت و اختصاصیت بالاست."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =13,
+                                    Passage = "HPV با بیش از 100 نوع ژنوتایپ، ویروس بدون پوشش با DNA دو رشته ای حلقوی است. و انواع تومورهای بدخیم و خوش خیم را در پوست و مخاطات انسان ایجاد می کند."
+                                },
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =13,
+                                    Passage = "برای بیماریزایی، نیاز است که ویروس HPV به صورت خطی درآمده و وارد ژنوم میزبان شود. در طی فرایند خطی شدن ژنوم ویروس، ممکن است قسمتی از ژنوم آن حذف گردد، اما برای عملکرد آنکوژنیک ویروس HPV، حضور ژنهای E6 و E7  ضروریست."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =13,
+                                    Passage = "از آنجایی که ژن های E6 و E7 به عنوان اصلی ترین ژن های سرطان زای ویروسی شناخته می شوند و نقش مهمی در ترانسفورماسیون سلول های ناحیه سرویکس به سمت سلول های بدخیم و سرطانی دارند، بهترین و اختصاصی ترین روش تشخیص HPV بر اساس شناسایی ژن های E6 و E7 در mRNA ویروسی می باشد. "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =13,
+                                    Passage = "Aptima HPV Assay اولین کیت تایید شده توسط FDA برای تشخیص ویروس پاپیلوماست و از تکنیک Transcription Mediated Amplification (TMA)  Hybridization Protection Assay, (HPA) و Dual Kinetic Assay (DKA) برای تشخیص ژن های E6 و E7 در mRNA ویروسی استفاده می کند."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage = "آزمایش Aptima HPV 16/18/45 Genotype Assay، نیز دارای تاییدیه FDA می باشد."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId=12,
+                                    Passage="کیت های تشخیصی Aptima HPV دارای اینترنال کنترل(Internal Control) برای بررسی صحت انجام فرایند تشخیص هستند و بدون Cross Reactivity با ژنوتایپ های کم خطر، 14 نوع HPV پرخطر را شناسایی می کنند:"
+                                }
+                            }
+                        };
+                        lst.Add(product);
+                    }
+                    break;
+                case "flow":
+                    {
+                        lst = new List<Product>();
+                        Product product = new Product()
+                        {
+                            Id = 11,
+                            ImageTitle = "BD Accuri C6 Plus",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/flow.jpg",
+                            ImageAlt = "thinprep",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "دستگاه  آنالایزربا دو لیزر ، تشخیص 4 رنگ و 6 پارامتر"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "  پرتابل با وزن 13.6 کیلوگرم Accuri C6 Plus"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "کاربری ساده دستگاه – این دستگاه نیاز به تنظیم ولتاژ ندارد "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "قابلیت خوانش انواع لوله ها با سایز های گوناگون "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = " اعلام تعداد مطلق سلولها در واحد میکرولیتر نمونه (غلظت سلولها) "
+                                },
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "دارای بیدهای کالیبراسیون اتوماتیک روزانه دستگاه"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "قابلیت اتصال به auto sampler جهت قرائت اتوماتیک نمونه ها "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "این دستگاه می تواند تا 10000 ذره در ثانیه را قرائت نماید"
+                                }
+                            }
+                        };
+                        lst.Add(product);
+                    }
+                    break;
+                case "thinprep":
+                    {
+                        lst = new List<Product>();
+                        Product product = new Product()
+                        {
+                            Id = 11,
+                            ImageTitle = "ThinPrep",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/thinprep.jpg",
+                            ImageAlt = "thinprep",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="دستگاه تمام اتوماتیک تهیه ی لام تین پرپ (ThinPrep) روشی استاندارد برای تهیه ی اسلایدهای سلولی یکنواخت جهت بررسی های سیتولوژی پاپ اسمیر، FNA (تیروئید ، پستان، غدد لنفاوی و...) مایعات و مخاط بدن را فراهم می آورد. "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="اولین تست پاپ اسمیر مایع (liquid-based) که موفق به اخذ گواهی FDA برای تشخیص HPV ، کلامیدیا ، گونوره آ و تریکومونازیس بر روی یک ویال شد."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="در روش ThinPrep صد در صد سلولهای جمع آوری شده از سرویکس به ویال های مخصوص ThinPrep منتقل و نگهداری می شوند. در حالیکه در روش پاپ اسمیر کلاسیک اکثر سلول ها به همراه ابزار نمونه گیری دور ریخته می شود ."
+                                },
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="در طی مراحل آماده سازی، خون، موکوس و سایر مواد زاید از سلولها جدا می شوند."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="به علت استفاده از ویال های حاوی نگهدارنده و عدم نیاز به سانتریفیوژ (استفاده از فیلترهای مخصوص)، مورفولوژی سلول ها حفظ می گردد."
+                                },new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="به علت فرآیند آماده سازی اتوماتیک نمونه ها، اسلاید های واضح با توزیع یکنواخت سلولی و رنگ آمیزی با زمینه ی روشن و شفاف حاصل می شود."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="سیستم ThinPrep حساسیت و اختصاصیت بسیار بالاتری نسبت به روش دستی پاپ اسمیر دارد."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="نتایج آزمایشات بالینی افزایش معنا داری در میزان حساسیت ASCUS و اختصاصیتHSIL  و LSIL نشان می دهد ."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="روشی اتوماتیک، استاندارد و دارای تاییدیه FDA برای بررسی های سیتولوژیک"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="Test ThinPrep Pap ، تنها آزمایش مورد تأیید FDA برای انجام پاپ اسمیر و HPV از طریق یک ویال "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="حفظ مورفولوژی سلول ها و کیفیت بالای نمونه به علت استفاده از ویال های حاوی نگهدارنده"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="افزایش حساسیت و اختصاصیت "
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="اسلاید های واضح و یکنواخت از نظر سلول و رنگ آمیزی با زمینه ی روشن و شفاف"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="عدم نیاز به سانتریفیوژ (به علت استفاده از فیلترهای مخصوص)"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId =12,
+                                    Passage="صرفه جویی در زمان و هزینه ی آماده سازی لام ها"
+                                }
+                            }
+                        };
+                        lst.Add(product);
+                    }
+                    break;
+                case "fibro":
+                    {
+                        lst = new List<Product>();
+                        Product product = new Product
+                        {
+                            Id = 11,
+                            ImageTitle = "تست فیبرونکتین جنینی",
+                            ImagePassage = "پیشگویی کننده بیوشیمیایی زایمان زودرس",
+                            ImageUrl = @"/assets/img/Laboratory/FFN.jpg",
+                            ImageAlt = "fibro",
+                            ProductDetails = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "فیبرونکتین جنینی یک گلیکوپروتئین چسبناک در سطح مشترک مادری-جنینی است. وجود این پروتئین در ترشحات واژینال طی هفته های 22 تا 34 بارداری، بیانگر افزایش خطر زایمان زودرس می باشد."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "آزمایش فیبرونکتین جنینی روشی غیرتهاجمی است که با یک نمونه گیری ساده از ترشحات رحمی خطر وقوع زایمان زودرس را پیش بینی میکند."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "سالانه تقریبا 15 میلیون نوزاد نارس در سراسر دنیا متولد می شود. زایمان زودرس طبق تعریف WHO به زایمان پیش از هفته 37 ام بارداری اطلاق می شود و مسبب اکثر معضلات غیر کروموزومی و مرگ و میر نوزادان است."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "بر اساس مطالعه ای که به مدت 3 سال بر روی 2900 خانم در سنین بارداری 22 تا 24 هفته انجام شده است فیبرونکتین جنینی بهترین آزمایش برای پیش بینی زایمان زودرس پیش از هفته 32 بارداری است."
+                                }
+                            },
+                            CompleteInfo = new List<ProductDetail>()
+                            {
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "آزمایش فیبرونکتین جنینی روشی غیرتهاجمی است که با یک نمونه گیری ساده از ترشحات رحمی خطر وقوع زایمان زودرس را پیش بینی میکند."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = " اقدامات درمانی بهتر برای زنانی که در معرض بیشترین خطر زایمان زودرس هستند اتخاذ می گردد."
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "در صورت نتیجه منفی تست با احتمال %99.2 اطمینان از عدم شروع زایمان در 14 روز آینده سبب :"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "85% کاهش استفاده از کورتیکواستروئیدها"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "84% کاهش هزینه های بیمارستانی"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "81% کاهش متوسط تعداد روزهای بستری در بیمارستان"
+                                },
+                                new ProductDetail
+                                {
+                                    Id = 12,
+                                    ProductId = 12,
+                                    Passage = "64% کاهش استفاده از توکولیتیک ها می گردد"
+                                }
+                            }
+                        };
+                        lst.Add(product);
+                    }
+                    break;
+                case "vaccum":
+                    {
+                        lst = new List<Product>();
+                        Product product = new Product
+                        {
+                            Id = 11,
+                            ImageTitle = "",
+                            ImagePassage = "",
+                            ImageUrl = @"/assets/img/Laboratory/vaccum.jpg",
+                        };
+                        lst.Add(product);
+                    }
+                    break;
+                default:
+                    {
+                        lst = new List<Product>();
+                    }
+                    break;
+            }
+            return View(lst);
         }
         public IActionResult JoinUs()
         {
