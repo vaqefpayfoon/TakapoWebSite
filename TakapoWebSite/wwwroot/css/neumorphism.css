@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-family: "IRANSans","Nunito Sans", sans-serif;
+    color: #2b2967;
 }
 
 p {
@@ -6400,12 +6401,12 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #44476A;
+    color: white;
 }
 
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-    color: #31344b;
-}
+    .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+        color: #fccece;
+    }
 
 .navbar-light .navbar-nav .nav-link.disabled {
     color: rgba(82, 84, 128, 0.9);
@@ -22719,7 +22720,7 @@ button.section-slack:focus {
 }
 
 .navbar-brand img {
-    height: 30px;
+    height: 40px;
 }
 
 .navbar-dark .navbar-brand-light {
@@ -25204,10 +25205,13 @@ button.section-slack:focus {
 }
 
 .navbar-transparent {
-    background-color: transparent;
+    background-color: #2b2967;
     border: 0;
 }
-
+.footer-transparent {
+    background-color: #2b2967;
+    border: 0;
+}
 @media (min-width: 992px) {
     .navbar-nav .nav-item {
         margin-right: .5rem;
@@ -32242,5 +32246,7 @@ article a:hover {
 .tooltip-inner {
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
 }
-
+.fa, .far, .fas {
+    color: #2b2967
+}
 /*# sourceMappingURL=neumorphism.css.map */

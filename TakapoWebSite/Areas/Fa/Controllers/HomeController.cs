@@ -95,7 +95,7 @@ namespace TakapoWebSite.Area.Fa.Controllers
                                 {
                                     Id = 3,
                                     ProductId = 1,
-                                    Passage = " کیفیت باالتر تشخیص با آنالیز تصاویر )View Combo (3D+2D در مقایسه با تصاویر 2"
+                                    Passage = "کیفیت بالاتر تشخیص با آنالیز تصاویر"
                                 },
                                 new ProductDetail
                                 {
